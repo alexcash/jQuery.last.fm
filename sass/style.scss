@@ -1,0 +1,90 @@
+@import "compass";
+
+.albums {
+	margin: 20px 40px;
+	position: relative;
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
+
+.album {
+	float: left;
+	width: 100%;
+	height: auto;
+	position: relative;
+	font-size: .8em;
+	@include transition(transform .4s ease-in-out);
+	@include perspective(600px);
+
+	@media screen and (min-width: 600px){
+		width: 50%;
+	}
+	@media screen and (min-width: 900px){
+		width: 33%;
+	}
+	@media screen and (min-width: 1200px){
+		width: 25%;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.front, .back {
+		float: none;
+		width: 100%;
+		height: auto;
+
+		@include transform-style(preserve-3d);
+		@include transition(transform .4s ease-in-out);
+	}
+
+	& .front {
+		z-index: 1;
+		@include transform(rotateX(0deg) rotateY(0deg));
+		.alpha{
+			@include transition(opacity .4s ease-in-out);
+			display: block;
+			content: '';
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(204,204,204,.7);
+			opacity: 0;
+		}
+	}
+
+	& .back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		text-align: center;
+		font-family: sans-serif;
+		padding: 10px;
+		@include box-sizing(border-box);
+		@include backface-visibility(hidden);
+		@include transform(rotateY(-180deg));
+	}
+
+	&.flip {
+		@include transform(scale(1.1,1.1));
+		z-index: 10;
+		& .front {
+			@include transform(rotateY(180deg));
+			.alpha {
+				opacity: 1;
+			}
+		}
+		& .back {
+			z-index: 2;
+			@include transform(rotateX(0deg) rotateY(0deg));
+		}
+	}
+}

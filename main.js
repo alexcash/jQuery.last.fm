@@ -4,9 +4,14 @@ var albums = [];
 
 function isLoaded () {
 	for (var i = 0; i < albums.length; i++){
-		var markup = $("<div class='album'><img src='" + albums[i].art + "'></div>");
+		var markup = $("<div class='album'><div class='front'><img src='" + albums[i].art + "'><div class='alpha'></div></div><div class='back'><h2>" + albums[i].artist + "</h2><h1>" + albums[i].name + "</h1><h3>" + albums[i].played + " tracks played</h3></div></div>");
 		$('.albums').append(markup);
 	}
+	$('.album').hover(function(){
+		$(this).addClass('flip');
+	},function(){
+		$(this).removeClass('flip');
+	});
 }
 
 $.getJSON( url, function(data){

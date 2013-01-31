@@ -1,0 +1,139 @@
+/* line 3, ../sass/style.scss */
+.albums {
+  margin: 20px 40px;
+  position: relative;
+}
+/* line 6, ../sass/style.scss */
+.albums:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 13, ../sass/style.scss */
+.album {
+  float: left;
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: .8em;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -ms-transition: -ms-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+}
+@media screen and (min-width: 600px) {
+  /* line 13, ../sass/style.scss */
+  .album {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 13, ../sass/style.scss */
+  .album {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 13, ../sass/style.scss */
+  .album {
+    width: 25%;
+  }
+}
+/* line 32, ../sass/style.scss */
+.album img {
+  width: 100%;
+  height: auto;
+}
+/* line 37, ../sass/style.scss */
+.album .front, .album .back {
+  float: none;
+  width: 100%;
+  height: auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -ms-transition: -ms-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+/* line 46, ../sass/style.scss */
+.album .front {
+  z-index: 1;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+}
+/* line 49, ../sass/style.scss */
+.album .front .alpha {
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  display: block;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(204, 204, 204, 0.7);
+  opacity: 0;
+}
+/* line 63, ../sass/style.scss */
+.album .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+/* line 76, ../sass/style.scss */
+.album.flip {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  z-index: 10;
+}
+/* line 79, ../sass/style.scss */
+.album.flip .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 81, ../sass/style.scss */
+.album.flip .front .alpha {
+  opacity: 1;
+}
+/* line 85, ../sass/style.scss */
+.album.flip .back {
+  z-index: 2;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
+  -o-transform: rotateX(0deg) rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
+}
