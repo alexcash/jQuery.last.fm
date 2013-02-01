@@ -1,4 +1,4 @@
-//var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + user + "&period=3month&api_key=" + APIkey + "&format=json";
+//var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + User + "&period=3month&api_key=" + APIkey + "&format=json";
 var url = "serverFixture.json";
 var albums = [];
 
@@ -7,11 +7,28 @@ function isLoaded () {
 		var markup = $("<div class='album'><div class='front'><img src='" + albums[i].art + "'><div class='alpha'></div></div><div class='back'><h2>" + albums[i].artist + "</h2><h1>" + albums[i].name + "</h1><h3>" + albums[i].played + " tracks played</h3></div></div>");
 		$('.albums').append(markup);
 	}
-	$('.album').hover(function(){
-		$(this).addClass('flip');
-	},function(){
-		$(this).removeClass('flip');
-	});
+
+	if (Behavior == "hover") {
+		$('.album').hover(function(){
+			$(this).addClass('flip');
+		},function(){
+			$(this).removeClass('flip');
+		});
+	} else {
+		$(document).bind('click', function (e) {
+			$('.flip').removeClass('flip');
+		});
+
+		$('.album').click(function(e){
+			e.stopPropagation();
+			if($('.flip')[0] === this){
+				$(this).removeClass('flip');
+			} else {
+				$('.flip').removeClass('flip');
+				$(this).addClass('flip');
+			}
+		});
+	}
 }
 
 $.getJSON( url, function(data){

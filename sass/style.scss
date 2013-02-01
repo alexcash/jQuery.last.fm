@@ -16,7 +16,7 @@
 	height: auto;
 	position: relative;
 	font-size: .8em;
-	@include transition(transform .4s ease-in-out);
+	@include transition(transform .4s ease-in-out, z-index .4s ease-in-out);
 	@include perspective(600px);
 
 	@media screen and (min-width: 600px){
@@ -55,7 +55,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			background: rgba(204,204,204,.7);
+			background: rgba(255,255,255,.75);
 			opacity: 0;
 		}
 	}

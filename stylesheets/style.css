@@ -17,11 +17,11 @@
   height: auto;
   position: relative;
   font-size: .8em;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  -moz-transition: -moz-transform 0.4s ease-in-out;
-  -ms-transition: -ms-transform 0.4s ease-in-out;
-  -o-transition: -o-transform 0.4s ease-in-out;
-  transition: transform 0.4s ease-in-out;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  -ms-transition: -ms-transform 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out, z-index 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, z-index 0.4s ease-in-out;
   -webkit-perspective: 600px;
   perspective: 600px;
 }
@@ -84,7 +84,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(204, 204, 204, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   opacity: 0;
 }
 /* line 63, ../sass/style.scss */
