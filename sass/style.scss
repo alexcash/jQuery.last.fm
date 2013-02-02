@@ -40,12 +40,12 @@
 		height: auto;
 
 		@include transform-style(preserve-3d);
-		@include transition(transform .4s ease-in-out);
+		@include transition(transform .4s ease-in-out, opacity .4s ease-in-out);
 	}
 
-	& .front {
+	.front {
 		z-index: 1;
-		@include transform(rotateX(0deg) rotateY(0deg));
+		@include transform(rotateY(0deg));
 		.alpha{
 			@include transition(opacity .4s ease-in-out);
 			display: block;
@@ -60,7 +60,7 @@
 		}
 	}
 
-	& .back {
+	.back {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -68,6 +68,7 @@
 		text-align: center;
 		font-family: sans-serif;
 		padding: 10px;
+		opacity: 0;
 		@include box-sizing(border-box);
 		@include backface-visibility(hidden);
 		@include transform(rotateY(-180deg));
@@ -84,7 +85,8 @@
 		}
 		& .back {
 			z-index: 2;
-			@include transform(rotateX(0deg) rotateY(0deg));
+			opacity: 1;
+			@include transform(rotateY(0deg));
 		}
 	}
 }
