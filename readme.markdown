@@ -1,15 +1,15 @@
 ## jquery.last.fm
 
-A jQuery plugin that populates the given element with album artwork based upon the given parameters. At this time, only for top albums.
+A jQuery plugin that populates the given element with album artwork from the last.fm api
 
 ### Usage:
 ```javascript
 $('.albums').lfm({
-	APIkey:		null,			// [string] required in order to retrieve content from last.fm
-	User:			null,			// [string] required username to retrieve data for
-	Behavior:	"hover",	// [string] optional controls detail content behavior. can be changed to 'click'
-	limit:		20,				// [integer] optional the number of albums you'd like to show. max of 50
-	period:		"3month"	// [string] (overall | 7day | 1month | 3month | 6month | 12month) optional the period of time for which to retrieve top albums
+	APIkey:   null,     // [string] required in order to retrieve content from last.fm
+	User:     null,     // [string] required username to retrieve data for
+	Behavior: "hover",  // [string] optional controls detail content behavior. can be changed to 'click'
+	limit:    20,       // [integer] optional the number of albums you'd like to show. max of 50
+	period:   "3month"  // [string] (overall | 7day | 1month | 3month | 6month | 12month) optional the period of time for which to retrieve top albums
 });
 ```
 
