@@ -1,12 +1,25 @@
+/*
+ * jQuery.last.fm
+ *
+ * A jQuery plugin that populates the given element with
+ * album artwork based upon the given parameters. At this time,
+ * only for top albums.
+ *
+ * Copyright © 2013 Alex Cash
+ * Dual licensed under the MIT and GPL licenses.
+ */
+
 (function( $ ) {
 	$.fn.lfm = function(options){
 		var settings = $.extend({
 			APIkey:		null,			// [string] required in order to retrieve content from last.fm
 			User:			null,			// [string] required username to retrieve data for
-			Behavior:	"hover"		// controls detail content behavior. can be changed to 'click'
+			Behavior:	"hover",	// [string] controls detail content behavior. can be changed to 'click'
+			limit:		20,				// [integer] the number of albums you'd like to show. max of 50
+			period:		"3month"	// [string] overall | 7day | 1month | 3month | 6month | 12month the period of time for which to retrieve top albums
 		}, options);
 
-		var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + settings.User + "&period=3month&api_key=" + settings.APIkey + "&format=json";
+		var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + settings.User + "&period=" + settings.period + "&api_key=" + settings.APIkey + "&format=json&limit=" + settings.limit;
 		//var url = "serverFixture.json"; //turn this on to try wihtout an api key or user
 		var albums = [];
 
