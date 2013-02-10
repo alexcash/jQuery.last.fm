@@ -1,6 +1,6 @@
 ## jquery.last.fm
 
-A jQuery plugin that populates the given element with album artwork from the last.fm api
+A jQuery plugin that populates the given element with album artwork from the last.fm api. Check out a demo on the [official project page](http://alexcash.github.com/jQuery.last.fm/).
 
 ### Usage:
 ```javascript
