@@ -1,17 +1,25 @@
 {
     "name": "lfm",
     "title": "jQuery.last.fm",
-    "description": "A jQuery plugin that populates the given element with album artwork from the last.fm api.",
+    "description": "A jQuery plugin that populates the given element with album artwork from the last.fm api. Comes with sass and css to do beautiful 3d animations.",
     "keywords": [
         "music",
         "last.fm",
         "lastfm",
         "album",
-        "artwork"
+        "artwork",
+        "3d",
+        "ui",
+        "animation",
+        "effect",
+        "ajax",
+        "responsive",
+        "css3"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": {
         "name": "Alex Cash",
+        "email": "alexcash@me.com",
         "url": "http://www.alexcash.com"
     },
     "licenses": [
