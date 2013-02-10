@@ -1,0 +1,23 @@
+body {
+	margin: 20px
+}
+
+pre {
+	overflow: scroll;
+	white-space: pre;
+	word-wrap: normal;
+}
+
+.album {
+	width: 100%;
+
+	@media screen and (min-width: 600px){
+		width: 50%;
+	}
+	@media screen and (min-width: 900px){
+		width: 33%;
+	}
+	@media screen and (min-width: 1200px){
+		width: 25%;
+	}
+}

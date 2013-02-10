@@ -1,0 +1,34 @@
+/* line 1, ../sass/demo.scss */
+body {
+  margin: 20px;
+}
+
+/* line 5, ../sass/demo.scss */
+pre {
+  overflow: scroll;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+/* line 11, ../sass/demo.scss */
+.album {
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  /* line 11, ../sass/demo.scss */
+  .album {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 11, ../sass/demo.scss */
+  .album {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 11, ../sass/demo.scss */
+  .album {
+    width: 25%;
+  }
+}

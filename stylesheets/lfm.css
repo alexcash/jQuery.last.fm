@@ -1,19 +1,17 @@
-/* line 12, ../sass/style.scss */
+/* line 12, ../sass/lfm.scss */
 .albums {
-  margin: 20px 40px;
   position: relative;
 }
-/* line 15, ../sass/style.scss */
+/* line 14, ../sass/lfm.scss */
 .albums:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 22, ../sass/style.scss */
+/* line 21, ../sass/lfm.scss */
 .album {
   float: left;
-  width: 100%;
   height: auto;
   position: relative;
   font-size: .8em;
@@ -25,30 +23,12 @@
   -webkit-perspective: 600px;
   perspective: 600px;
 }
-@media screen and (min-width: 600px) {
-  /* line 22, ../sass/style.scss */
-  .album {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 900px) {
-  /* line 22, ../sass/style.scss */
-  .album {
-    width: 33%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* line 22, ../sass/style.scss */
-  .album {
-    width: 25%;
-  }
-}
-/* line 41, ../sass/style.scss */
+/* line 29, ../sass/lfm.scss */
 .album img {
   width: 100%;
   height: auto;
 }
-/* line 46, ../sass/style.scss */
+/* line 34, ../sass/lfm.scss */
 .album .front, .album .back {
   float: none;
   width: 100%;
@@ -61,7 +41,7 @@
   -o-transition: -o-transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
-/* line 55, ../sass/style.scss */
+/* line 43, ../sass/lfm.scss */
 .album .front {
   z-index: 1;
   -webkit-transform: rotateY(0deg);
@@ -70,7 +50,7 @@
   -o-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
-/* line 58, ../sass/style.scss */
+/* line 46, ../sass/lfm.scss */
 .album .front .alpha {
   -webkit-transition: opacity 0.4s ease-in-out;
   -moz-transition: opacity 0.4s ease-in-out;
@@ -87,7 +67,7 @@
   background: rgba(255, 255, 255, 0.75);
   opacity: 0;
 }
-/* line 72, ../sass/style.scss */
+/* line 60, ../sass/lfm.scss */
 .album .back {
   position: absolute;
   top: 0;
@@ -108,7 +88,7 @@
   -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
-/* line 86, ../sass/style.scss */
+/* line 74, ../sass/lfm.scss */
 .album.flip {
   -webkit-transform: scale(1.1, 1.1);
   -moz-transform: scale(1.1, 1.1);
@@ -117,7 +97,7 @@
   transform: scale(1.1, 1.1);
   z-index: 10;
 }
-/* line 89, ../sass/style.scss */
+/* line 77, ../sass/lfm.scss */
 .album.flip .front {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -125,11 +105,11 @@
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-/* line 91, ../sass/style.scss */
+/* line 79, ../sass/lfm.scss */
 .album.flip .front .alpha {
   opacity: 1;
 }
-/* line 95, ../sass/style.scss */
+/* line 83, ../sass/lfm.scss */
 .album.flip .back {
   z-index: 2;
   opacity: 1;

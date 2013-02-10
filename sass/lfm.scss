@@ -10,7 +10,6 @@
 @import "compass";
 
 .albums {
-	margin: 20px 40px;
 	position: relative;
 	&:after {
 	  content: "";
@@ -21,22 +20,11 @@
 
 .album {
 	float: left;
-	width: 100%;
 	height: auto;
 	position: relative;
 	font-size: .8em;
 	@include transition(transform .4s ease-in-out, z-index .4s ease-in-out);
 	@include perspective(600px);
-
-	@media screen and (min-width: 600px){
-		width: 50%;
-	}
-	@media screen and (min-width: 900px){
-		width: 33%;
-	}
-	@media screen and (min-width: 1200px){
-		width: 25%;
-	}
 
 	img {
 		width: 100%;
