@@ -19,7 +19,7 @@
 			period:		"3month"	// [string] overall | 7day | 1month | 3month | 6month | 12month the period of time for which to retrieve top albums
 		}, options);
 
-		var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + settings.User + "&period=" + settings.period + "&api_key=" + settings.APIkey + "&format=json&limit=" + settings.limit;
+		var url = "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=" + settings.User + "&period=" + settings.period + "&api_key=" + settings.APIkey + "&format=json&limit=" + settings.limit +"&callback=?";
 		//var url = "serverFixture.json"; //turn this on to try wihtout an api key or user
 		var albums = [];
 
