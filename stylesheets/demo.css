@@ -12,12 +12,21 @@ pre {
 
 /* line 11, ../sass/demo.scss */
 .album {
-  width: 100%;
+  width: 50%;
+  -webkit-text-size-adjust: none;
+}
+@media screen and (min-width: 300px) {
+  /* line 16, ../sass/demo.scss */
+  .album h1, .album h2, .album h3 {
+    font-size: 13px;
+    line-height: 1em;
+  }
 }
 @media screen and (min-width: 600px) {
-  /* line 11, ../sass/demo.scss */
-  .album {
-    width: 50%;
+  /* line 23, ../sass/demo.scss */
+  .album h1, .album h2, .album h3 {
+    font-size: 25px;
+    line-height: 1em;
   }
 }
 @media screen and (min-width: 900px) {
@@ -25,10 +34,39 @@ pre {
   .album {
     width: 33%;
   }
+  /* line 30, ../sass/demo.scss */
+  .album h1, .album h2, .album h3 {
+    font-size: 35px;
+    line-height: 1em;
+  }
 }
 @media screen and (min-width: 1200px) {
   /* line 11, ../sass/demo.scss */
   .album {
     width: 25%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  /* line 11, ../sass/demo.scss */
+  .album {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* line 46, ../sass/demo.scss */
+  .phone-hide {
+    display: none;
+  }
+}
+
+/* line 51, ../sass/demo.scss */
+.phone-show {
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  /* line 51, ../sass/demo.scss */
+  .phone-show {
+    display: inline;
   }
 }

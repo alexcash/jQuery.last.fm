@@ -9,15 +9,48 @@ pre {
 }
 
 .album {
-	width: 100%;
+	width: 50%;
+  -webkit-text-size-adjust:none;
+
+	@media screen and (min-width: 300px){
+		h1, h2, h3 {
+			font-size: 13px;
+			line-height: 1em;
+		}
+	}
 
 	@media screen and (min-width: 600px){
-		width: 50%;
+		h1, h2, h3 {
+			font-size: 25px;
+			line-height: 1em;
+		}
 	}
+
 	@media screen and (min-width: 900px){
+		h1, h2, h3 {
+			font-size: 35px;
+			line-height: 1em;
+		}
 		width: 33%;
 	}
+	
 	@media screen and (min-width: 1200px){
 		width: 25%;
+	}
+
+	@media screen and (min-width: 1500px){
+		width: 20%;
+	}
+}
+
+.phone-hide {
+	@media screen and (max-width: 400px){
+		display: none;
+	}
+}
+.phone-show {
+	display: none;
+	@media screen and (max-width: 400px){
+		display: inline;
 	}
 }
